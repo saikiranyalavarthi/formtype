@@ -1,129 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Lead Form Page</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contact Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
-    }
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #0b0b0b;
+        font-family: Arial, sans-serif;
+      }
 
-    body {
-      background: #0b0b0b;
-      color: white;
-    }
+      .form-box {
+        background: #121212;
+        padding: 30px;
+        border-radius: 12px;
+        width: 320px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      }
 
-    /* HEADER */
-    header {
-      position: sticky;
-      top: 0;
-      background: rgba(0,0,0,0.7);
-      backdrop-filter: blur(10px);
-      padding: 15px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
+      h2 {
+        color: white;
+        margin-bottom: 20px;
+        text-align: center;
+      }
 
-    header h1 {
-      font-size: 20px;
-      color: #00ffd5;
-    }
+      input {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        border: none;
+        background: #1e1e1e;
+        color: white;
+        outline: none;
+      }
 
-    header a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-      font-size: 14px;
-    }
+      input::placeholder {
+        color: #888;
+      }
 
-    /* HERO */
-    .hero {
-      height: 40vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      background: radial-gradient(circle at center, #1a1a1a, #000);
-    }
+      button {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+        background: linear-gradient(45deg, #00ffd5, #00aaff);
+        color: black;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    </style>
+  </head>
 
-    .hero h2 {
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      color: #aaa;
-    }
-
-    /* FORM SECTION */
-    .form-section {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 60px 20px;
-    }
-
-    .form-box {
-      background: #121212;
-      padding: 30px;
-      border-radius: 15px;
-      width: 100%;
-      max-width: 500px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
-    }
-
-    /* FOOTER */
-    footer {
-      padding: 20px;
-      text-align: center;
-      color: #777;
-      border-top: 1px solid rgba(255,255,255,0.1);
-    }
-  </style>
-</head>
-
-<body>
-
-  <!-- HEADER -->
-  <header>
-    <h1>Your Brand</h1>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Services</a>
-      <a href="#">Contact</a>
-    </nav>
-  </header>
-
-  <!-- HERO -->
-  <section class="hero">
-    <h2>Get Started Today 🚀</h2>
-    <p>Fill the form below and our team will contact you shortly</p>
-  </section>
-
-  <!-- FORM -->
-  <section class="form-section">
+  <body>
     <div class="form-box">
+      <h2>Contact Details</h2>
 
-      <script 
-        src="//forms.cdn.sell.do/t/forms/648312e68eb6d81861c9a038/69eb2d87a3d855840d2789f2.js" 
-        data-form-id="69eb2d87a3d855840d2789f2">
-      </script>
-
+      <form>
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email Address" required />
+        <input type="tel" placeholder="Phone Number" required />
+        <button type="submit">Submit</button>
+      </form>
     </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    © 2026 Your Company. All rights reserved.
-  </footer>
-
-</body>
+  </body>
 </html>
